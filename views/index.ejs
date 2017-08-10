@@ -132,40 +132,9 @@
                                <hr>
                                <center>
                        
-                               
-                                  <div class="form-group" id="inputkismi" style="display: none;width:60%;">
-                                      <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                      <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
-                                  </div>
-                                  <button type="submit" style="display: none;" class="btn btn-default" id="mailkismi">Send Email This Project</button>
-                               <br>
-                               <a href="#" id="mailgonder" style="color:blue">Download</a> this project 
-
+                               dd
                                </center> 
-							                <script>
-                                $(document).ready(function(){
-                                  
-                                    $("#mailgonder").click(function(){
-                                        document.getElementById("mailkismi").style.display = "block";
-                                        document.getElementById("inputkismi").style.display = "block";
-
-                                        $("#mailkismi").click(function(){
-                                          var data = {};
-                                            data.email = document.getElementById("exampleInputEmail3").value;
-                                            $.ajax({
-                                                url: '/api/mailgonder',
-                                                type: 'POST', 
-                                                contentType: 'application/json',
-                                                data: JSON.stringify(data),
-                                                success: function(data) {
-                                                    console.log(data);
-                                                }
-                                            });
-                                        });
-                                    });
-                                 
-                                });
-                              </script>
+							  
 
                               <center>
 
