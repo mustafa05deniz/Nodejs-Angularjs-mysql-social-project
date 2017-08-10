@@ -1,0 +1,25 @@
+{
+  "name": "ExpressApp",
+  "version": "0.0.1",
+  "description": "A Node.js App using express",
+  "dependencies": {
+    "bcrypt-nodejs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "*",
+    "ejs": "^2.5.7",
+    "express": "*",
+    "express-session": "*",
+    "express3-handlebars": "~0.5.0",
+    "json-socket": "*",
+    "morgan": "*",
+    "multer": "~0.1.6",
+    "mysql": "^2.14.1",
+    "nodemailer": "^4.0.1",
+    "nodemon": "^1.11.0",
+    "passport": "*",
+    "passport-local": "*",
+    "socket.io": "*"
+  },
+  "engine": "node >=0.6.x"
+}

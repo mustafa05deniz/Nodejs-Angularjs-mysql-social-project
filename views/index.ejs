@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+<html ng-app="scotchTodo">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>beta</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="public/css/bootstrap.min.css" rel="stylesheet">
+		<link href="public/css/bootstrap.icon-large.min.css" rel="stylesheet">
+		<link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
+  <script src="public/js/core.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="public/css/style.css" rel="stylesheet">
+
+	</head>
+<body ng-controller="mainController" >
+	<div class="wrapper">
+		<div class="box">
+			<div class="row row-offcanvas row-offcanvas-left">
+            <div class="column col-sm-12 col-xs-11" id="main">
+              	<div class="navbar navbar-blue navbar-static-top">  
+                    <div class="navbar-header">
+                    	<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+	                        <span class="sr-only">Toggle</span>
+	                        <span class="icon-bar"></span>
+	          				<span class="icon-bar"></span>
+	          				<span class="icon-bar"></span>
+                        </button>
+                    <a href="/" class="navbar-brand logo">l</a>
+                  	</div>
+                    <form class="navbar-form navbar-left">
+                        <div class="input-group input-group-sm" style="max-width:360px;">
+                          <input type="text" class="form-control" placeholder="search" name="srch-term" id="srch-term">
+                          <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                          </div>
+                        </div>
+                    </form>
+                    <ul class="nav navbar-nav">
+                      <li>
+                        <a href="/"><i class="glyphicons-home"></i> Home </a>
+                      </li>
+                      <li>
+                        <a href="#postModal" role="button" data-toggle="modal"><span class="glyphicons glyphicons-leaf"></span> Share </a>
+                      </li>
+                      
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-glass"></i></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="">Profilim</a></li>
+                          <li><a href="">More</a></li>
+                          <li><a href="">More</a></li>
+                          <li><a href="">More</a></li>
+                          <li><a href="">More</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  	</nav>
+                </div>
+                <div class="padding">
+                    <div class="full col-sm-9">
+                        <!-- content -->                      
+                      	<div class="row">
+                         <!-- main col left --> 
+                         <div class="col-sm-3">
+                           
+                              <div class="panel panel-default">
+                                <div class="panel-thumbnail"><img src="" class="img-responsive"></div>
+                                <div class="panel-body">
+                                  <p class="lead"> Profile</p>
+                                  <p>
+                                  	<img src="public/images/profile.png" alt="..." class="img-thumbnail"><hr>
+                                  	email : {{kullanici[0].username}}
+
+                                  </p>
+									
+
+                                  
+                                  
+                                  
+                                </div>
+                              </div>
+
+                           
+                              
+                           
+                              <div class="well"> 
+                                   <form class="form-horizontal" role="form">
+                                    <h4>important </h4> 
+                                    
+									 
+                              </div>
+                           
+                              <div class="panel panel-default">
+                                 <div class="panel-heading"><a href="#" class="pull-right">show</a> <h4>last post </h4></div>
+                                  <div class="panel-body">
+                               
+                                    <div class="clearfix"></div>
+                                    
+                                    <ul class="list-unstyled">
+                                      
+                                    </ul>
+                                  </div>
+                              </div>
+                         
+							  <div class="panel panel-default">
+                               <div class="panel-thumbnail"><img src="" class="img-responsive"></div>
+                                <div class="panel-body">
+                                  <p class="lead">Social</p>
+                                  <p>Coming soon</p>
+                                  
+                                  <p>
+                                    <img src="https://lh6.googleusercontent.com/-5cTTMHjjnzs/AAAAAAAAAAI/AAAAAAAAAFk/vgza68M4p2s/s28-c-k-no/photo.jpg" width="28px" height="28px">
+                                    <img src="https://lh4.googleusercontent.com/-6aFMDiaLg5M/AAAAAAAAAAI/AAAAAAAABdM/XjnG8z60Ug0/s28-c-k-no/photo.jpg" width="28px" height="28px">
+                                    <img src="https://lh4.googleusercontent.com/-9Yw2jNffJlE/AAAAAAAAAAI/AAAAAAAAAAA/u3WcFXvK-g8/s28-c-k-no/photo.jpg" width="28px" height="28px">
+                                  </p>
+                                </div>
+                               
+                              </div>
+                         </div>
+
+                        
+                          
+                          <!-- main col right -->
+            <div class="col-sm-6">
+							
+							 <div class="panel panel-default">
+                               <hr>
+                               <center>
+                       
+                               
+                                  <div class="form-group" id="inputkismi" style="display: none;width:60%;">
+                                      <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                      <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                                  </div>
+                                  <button type="submit" style="display: none;" class="btn btn-default" id="mailkismi">Send Email This Project</button>
+                               <br>
+                               <a href="#" id="mailgonder" style="color:blue">Download</a> this project 
+
+                               </center> 
+							                <script>
+                                $(document).ready(function(){
+                                  
+                                    $("#mailgonder").click(function(){
+                                        document.getElementById("mailkismi").style.display = "block";
+                                        document.getElementById("inputkismi").style.display = "block";
+
+                                        $("#mailkismi").click(function(){
+                                          var data = {};
+                                            data.email = document.getElementById("exampleInputEmail3").value;
+                                            $.ajax({
+                                                url: '/api/mailgonder',
+                                                type: 'POST', 
+                                                contentType: 'application/json',
+                                                data: JSON.stringify(data),
+                                                success: function(data) {
+                                                    console.log(data);
+                                                }
+                                            });
+                                        });
+                                    });
+                                 
+                                });
+                              </script>
+
+                              <center>
+
+                                <% rows1.forEach(function(rows1) { %> 
+                                  <%=rows1.views%> views
+                                  <%=rows1.download%> download
+                                <% }); %>
+                              </center>
+                              <hr></div>
+                              
+
+                                <% rows3.forEach(function(rows3) { %> 
+
+                                <div class="checkbox" >
+                                  <div class="panel panel-default">
+                                    <div class="panel-heading"><a href="#" class="pull-right" > </a> <h4><a href="#" > <%=rows3.username%> </a></h4></div>
+                                      <div class="panel-body">
+                                        <%=rows3.text%>
+                                        <div class="clearfix"></div><hr>
+                                        <form>
+                                            <div class="input-group">
+                                              <div class="input-group-btn">
+                                              
+                                              <button class="btn btn-default" >
+                                                <a href="/" ng-click="likepost(<%=rows3.id%>)">
+                                                <%=rows3.likes%> 
+                                                </a>
+                                              </button>
+                                              </div>
+                                              
+                                              <input type="text" class="form-control" placeholder="add comment" ng-model="formData.commenttext">
+                            
+                                            </div>
+                                            
+                                            <a href="#" ng-click="viewcomment(<%=rows3.id%>)"><center><span class="label label-primary"> show Comments</span></center></a>
+                                            <div ng-repeat="todo2 in comments">
+                                            <h4>
+                                              <div ng-if="todo2.idsi1 == <%=rows3.id%>">
+                                                -{{todo2.u}}
+                                              
+                                              <span class="label label-success">{{todo2.t}}</span>
+                                                  
+                                              </div>
+
+                                              </h4>
+                                            
+                                            </div>
+                                            <button type="submit" class="btn btn-default"><a href="/" ng-click="addcomment(<%=rows3.id%>)">Add</a></button>
+                                        </form>
+                                      </div>
+                                  </div>
+                                </div>
+                                <% }); %>
+
+                   
+                          
+                
+
+              </div>
+
+
+                           <div class="col-sm-3">
+ 							<div class="panel panel-default">
+                              <div class="panel-heading"><a href="#" class="pull-right"></a> <h4>Other Posts</h4></div>
+                                <div class="panel-body">
+                               	<div class="clearfix"></div>
+                                    
+                                    <ul class="list-unstyled">
+                                    <a href="#" class="list-group-item ">Nodejs Angularjs and mysql social network project</a>
+                                    <a href="#" class="list-group-item ">Communicate python and nodejs</a>
+                                    <a href="#" class="list-group-item ">login and signup project</a>
+                                    <a href="#" class="list-group-item ">Nodejs verification email</a>
+                                    </ul>
+                              	
+                             
+                              	</div>
+                              </div>
+                              <div class="panel panel-default">
+                                 <div class="panel-heading"><a href="#" class="pull-right"></a> <h4>Populer Post </h4></div>
+                                  <div class="panel-body">
+                               
+                                    <div class="clearfix"></div>
+                                    
+                                    <ul class="list-unstyled">
+                                      <li><a href="#" class="list-group-item ">Nodejs Angularjs and mysql social network project</a></li>
+                                    </ul>
+                                  </div>
+                              </div>
+                           </div>
+
+
+                       </div><!--/row-->
+                      
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <a href="https://twitter.com/kodizim">Twitter +</a> <small class="text-muted">|</small> <a href="https://www.facebook.com/kodizim/">Facebook +</a> <small class="text-muted">|</small> <a href="https://github.com/mustafa05deniz">Github  </a>
+                          </div>
+                        </div>
+                      
+                        <div class="row" id="footer">    
+                          <div class="col-sm-6">
+                            
+                          </div>
+                          <div class="col-sm-6">
+                            <p>
+                            <a href="#" class="pull-right">© 2017 </a>
+                            </p>
+                          </div>
+                        </div>
+                      
+                      <hr>
+                      
+                      <h4 class="text-center">
+                      <a href="https://kodizim.com" target="ext">kodizim.com</a>
+                      </h4>
+                        
+                      <hr>
+                        
+                      
+                    </div><!-- /col-9 -->
+                </div><!-- /padding -->
+            </div>
+            <!-- /main -->
+          
+        </div>
+    </div>
+</div>
+
+
+<!--post modal-->
+<div id="postModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			Share 
+      </div>
+      <div class="modal-body">
+          <form class="form center-block">
+            <div class="form-group">
+              <textarea class="form-control input-lg" autofocus=""  placeholder="Text" ng-model="formData.gonderi_icerik"></textarea>
+            </div>
+          </form>
+		 
+      </div>
+      <div class="modal-footer">
+          <div>
+          <button type="submit" class="btn btn-primary btn-lg" data-dismiss="modal" aria-hidden="true" ng-click="createTodo()">Add</button>
+
+		  </div>	
+      </div>
+  </div>
+  </div>
+</div>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="public/js/bootstrap.min.js"></script>
+		<script src="public/js/scripts.js"></script>
+	</body>
+</html>
