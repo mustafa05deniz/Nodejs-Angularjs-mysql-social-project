@@ -3,7 +3,7 @@ create table users(
 	id int Auto_increment primary key,
 	username varchar(100),
 	password varchar(100)
-)
+);
 
 
 
@@ -13,7 +13,7 @@ create table posts (
     userID int,
     likes int ,
     foreign key(userID) references users(id)
-)
+);
 
 
 create table comments(
@@ -23,4 +23,4 @@ create table comments(
     postID int,
     foreign key(userID) references users(id),
     foreign key(postID) references posts(id)
-)
+);
