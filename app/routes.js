@@ -28,22 +28,8 @@ module.exports = function(app,passport) {
                 
             }
 
-            connection.query("update static set views = views + 1 where id = 1");
-            connection.query('select * from static where id = 1',function(err,rows1){
-                
-                console.log(rows1);
-                if (err) {
-                    console.log(err);
-                } else {
-                    if (rows1.length) {
-                        for (var i = 0, len = rows1.length; i < len; i++) {  //query den gelen bütün parametreleri rows sınıfına ekliyoruz .
-                            row2[i] = rows1[i];
-                        }  
-                    }
-                    
-                    
-                }
-            })
+            
+
             connection.query('select posts.id,username,text,likes from users inner join posts on users.id = posts.userID', function (err, rows2) {
                 if (err) {
                     console.log(err);
@@ -56,10 +42,8 @@ module.exports = function(app,passport) {
                     
                     
                 }
-                console.log("rows"+row);
-        console.log("rows1"+row2);
-        console.log("rows2"+row3);
-        res.render('index.ejs', {rows : row,rows1:row2,rows3:row3}); 
+           
+        res.render('index.ejs', {rows : row,rows3:row3}); 
                 
             });
             
